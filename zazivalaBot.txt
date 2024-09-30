@@ -1,0 +1,35 @@
+import telebot 
+
+bot = telebot.TeleBot('7518380637:AAFczWNMbw9WuP4LOGPDLLYzoIvEf4g5osk')
+
+
+@bot.message_handler(commands=['start'])
+def start(message):
+    bot.send_message(message.chat.id, "Привет! Я зазывала бот. Напиши /all, чтобы позвать всех участников чата.")
+@bot.message_handler(commands=['all'])
+def all(message):
+    nick1 = ("Fjpnjvnvvbx")
+    nick2 = ("Marinka_br")
+    nick3 = ("Misty_kisa")
+    nick4 = ("diiiiivan")
+    nick5 = ("podosoniavik")
+    nick6 = ("Co_ffee228")
+    nick7 = ("sojullkaa")
+    bot.send_message(message.chat.id, f"@{nick1}" "  " f"@{nick2}" "  " f"@{nick3}" "  " f"@{nick4}" "  " f"@{nick5}" "  " f"@{nick6}" "  " f"@{nick7}")
+@bot.message_handler(commands=['пн'])
+def pn(message):
+    bot.send_message(message.chat.id, "Ров\n" "Алгебра\n" "Информатика\n" "География\n" "Биология\n" "Физика\n" "Химия\n" "\n" "<b>ГЕОГРАФИЯ</b>\n" "<b>БИОЛОГИЯ</b>", parse_mode='html')
+@bot.message_handler(commands=['вт'])
+def vt(message):
+    bot.send_message(message.chat.id, "Биология\n" "Геометрия\n" "История\n" "Англ.яз\n" "Русский.яз\n" "Физика\n" "Литература\n" "СБТ1\n" "\n" "<b>ОБЩЕСТВОЗНАНИЕ</b>", parse_mode='html')
+@bot.message_handler(commands=['ср'])
+def sr(message):
+    bot.send_message(message.chat.id, "Обществознание\n" "ОБЗР\n" "Алгебра\n" "География\n" "Русский.яз\n" "История\n" "Физ-ра\n" "СБТ2\n")
+@bot.message_handler(commands=['чт'])
+def cht(message):
+    bot.send_message(message.chat.id, "Геометрия\n" "<b>МАТЕМАТИКА</b>\n" "Литература\n" "Англ.яз\n" "Рмг\n" "Физика\n" "Физ-ра\n" "\n" "<b>РУССКИЙ.ЯЗ</b>", parse_mode='html')
+@bot.message_handler(commands=['пт'])
+def pt(message):
+    bot.send_message(message.chat.id, "Новейшая История\n" "Алгебра\n" "Алгебра\n" "Англ.яз\n" "Русский.яз\n" "Литература\n" "Химия\n" "\n" "<b>ИНФОРМАТИКА</b>", parse_mode='html')
+
+bot.polling(none_stop=True)
